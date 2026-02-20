@@ -1,0 +1,8 @@
+coverage
+pylint
+pylint-pytest
+pytest
+pytest-asyncio
+pytest-cov
+pytest-mock
+responses
