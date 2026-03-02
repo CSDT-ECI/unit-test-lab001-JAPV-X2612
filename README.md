@@ -27,23 +27,45 @@ A unit testing laboratory using the classic **Yatzy** dice game as a case study.
 
 This lab implements **55 unit tests** for a Python implementation of *Yatzy*, covering all 12 scoring categories defined by the official game rules. The test suite follows the **AAA** (*Arrange, Act, Assert*) pattern and is organized using `pytest` class-based structure.
 
-> ⚠️ **Two bugs were discovered** in the original `yatzy.py` during testing: `score_pair()` uses strict equality (`== 2`) when checking die counts, causing it to return `0` when three or four dice show the same value — incorrect per the official rules. These cases are marked as `@pytest.mark.xfail` to document the known defects without hiding them.
-
 ---
 
 ## 📁 **Project Structure**
 
 ```
-yatzy-unit-testing/
+yatzy-tdd-unit-testing/
+│
+├── .github/
+│   └── workflows/
+│       └── ci-cd.yml
+│
 ├── assets/
 │   └── images/
 │       ├── 01-coverage-report-files.png
 │       ├── 02-coverage-report-functions.png
 │       └── 03-coverage-report-classes.png
-├── yatzy.py          # Source code under test
-├── test_yatzy.py     # Unit test suite
+│
+├── src/
+│   ├── __init__.py
+│   └── yatzy/
+│       ├── __init__.py
+│       └── yatzy.py
+│
+├── tests/
+│   ├── __init__.py
+│   └── unit/
+│       ├── __init__.py
+│       └── src/
+│           ├── __init__.py
+│           └── yatzy/
+│               ├── __init__.py
+│               └── test_yatzy.py
+│
+├── .coverage
+├── .gitignore
 ├── LICENSE
-└── README.md
+├── pyproject.toml
+├── README.md
+└── requirements-test.txt
 ```
 
 ---
@@ -79,7 +101,6 @@ The test suite in `test_yatzy.py` covers **all 12 scoring methods** of the `Yatz
   - ✅ Zero score (no match)
   - ✅ All-dice-equal edge case
   - ✅ Category-specific boundary rules (e.g., four-of-a-kind inside pair scoring)
-- 2 tests marked `xfail` for known bugs in production code
 
 **Run the tests:**
 
