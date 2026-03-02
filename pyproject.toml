@@ -16,3 +16,6 @@ source = ["src/yatzy"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pycodestyle]
+max-line-length = 150
