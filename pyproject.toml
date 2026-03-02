@@ -9,7 +9,10 @@ requires-python = ">=3.12"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--cov=yatzy --cov-report=html --cov-fail-under=85"
+addopts = "--cov=src/yatzy --cov-report=html --cov-fail-under=85"
 
 [tool.coverage.run]
 source = ["src/yatzy"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
