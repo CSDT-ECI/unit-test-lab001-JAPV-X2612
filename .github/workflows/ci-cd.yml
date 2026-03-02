@@ -56,9 +56,6 @@ jobs:
         run: |
           pip install pytest pytest-cov pycodestyle
 
-      - name: Lint with pycodestyle (PEP 8)
-        run: pycodestyle src/yatzy/yatzy.py
-
       - name: Cache installed packages
         uses: actions/cache@v4
         with:

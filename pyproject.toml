@@ -16,6 +16,3 @@ source = ["src/yatzy"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.pycodestyle]
-ignore = ["E501"]
