@@ -122,19 +122,27 @@ pytest test_yatzy.py --cov=yatzy --cov-report=html --cov-fail-under=85
 
 ### 🗂️ Files View
 
-<img src="assets/images/01-coverage-report-files.png" alt="Coverage Report - Files" width="50%">
+<img src="assets/images/01-coverage-report-files.png" alt="Coverage Report - Files" width="70%">
 
 ### ⚙️ Functions View
 
-<img src="assets/images/02-coverage-report-functions.png" alt="Coverage Report - Functions" width="50%">
+<img src="assets/images/02-coverage-report-functions.png" alt="Coverage Report - Functions" width="70%">
 
 ### 🏛️ Classes View
 
-<img src="assets/images/03-coverage-report-classes.png" alt="Coverage Report - Classes" width="50%">
+<img src="assets/images/03-coverage-report-classes.png" alt="Coverage Report - Classes" width="70%">
 
 The coverage formula achieved:
 
 $$\text{Coverage} = \frac{\text{Statements Executed}}{\text{Total Statements}} \times 100 = \frac{188}{188} \times 100 = 100\%$$
+
+---
+
+## ✅ CI/CD Pipeline Execution
+
+Successful execution of the CI/CD pipeline with all three stages completed:
+
+<img src="assets/images/04-ci-cd-pipeline-successful-execution.png" alt="CI/CD Pipeline Successful Execution" width="90%">
 
 ---
 
