@@ -27,10 +27,10 @@ env:
 
 jobs:
 
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------------
   # STAGE 1 · BUILD
   # Install dependencies and verify the package can be imported successfully.
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------------
   build:
     name: 🏗️ Build
     runs-on: ubuntu-latest
@@ -66,11 +66,11 @@ jobs:
           key: pip-${{ env.PYTHON_VERSION }}-${{ hashFiles('pyproject.toml') }}
           restore-keys: pip-${{ env.PYTHON_VERSION }}-
 
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------------
   # STAGE 2 · TEST
   # Run the full unit test suite and enforce the minimum coverage threshold.
   # This stage depends on a successful build.
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------------
   test:
     name: 🧪 Test
     runs-on: ubuntu-latest
@@ -118,11 +118,11 @@ jobs:
           flags: unittests
           fail_ci_if_error: false
 
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------------
   # STAGE 3 · DEPLOY
   # Publish the package to PyPI. Runs only on push to main after tests pass.
   # Requires the PYPI_API_TOKEN secret to be configured in the repository.
-  # ---------------------------------------------------------------------------
+  # ----------------------------------------------------------------------------
   deploy:
     name: 🚀 Deploy
     runs-on: ubuntu-latest
